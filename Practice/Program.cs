@@ -68,19 +68,33 @@
 // Console.Write($"Число {res}");
 
 //  7. Показать числа от -N до N
-string numbers (int a){
-    if (a > 0) {a = a * -1;}
-    int sum = a * -2 + 1; 
-    int [] arr = new int [sum];
-    string res = string.Empty;
-        for (int i = 0; i < arr.Length; i++) {arr [i] = a; a = a+1;}
-        for (int i = 0; i < arr.Length; i++) {res = $"{Convert.ToString(res)} {Convert.ToString(arr[i])}";}
-    return res;
-}
-string valueArr = numbers(-17);
-Console.Write($"А чисел то не мало:\n {valueArr} ");
+// string numbers (int a){
+//     if (a > 0) {a = a * -1;}
+//     int sum = a * -2 + 1; 
+//     int [] arr = new int [sum];
+//     string res = string.Empty;
+//         for (int i = 0; i < arr.Length; i++) {arr [i] = a; a = a+1;}
+//         for (int i = 0; i < arr.Length; i++) {res = $"{Convert.ToString(res)} {Convert.ToString(arr[i])}";}
+//     return res;
+// }
+// string valueArr = numbers(-17);
+// Console.Write($"А чисел то не мало:\n {valueArr} ");
 
 //  8. Показать четные числа от 1 до N
+string numbers (int a){
+    string res = string.Empty;
+    if (a < 0) {res = $"Число {a} должно быть положительным";}
+    else{
+    int [] arr = new int [a]; int b = 1;    
+        for (int i = 0; i < arr.Length; i++) {arr [i] = b; b = b+1;}
+        for (int i = 0; i < arr.Length; i++) {if (arr[i] % 2 == 0) {res = $"{Convert.ToString(res)} {Convert.ToString(arr[i])}";}}
+    }
+    return res;
+}
+int randomNumb = new Random().Next(1, 100);
+string valueArr = numbers(randomNumb);
+Console.Write($"А чисел то не мало от {randomNumb}:\n {valueArr} ");
+
 //  9. Показать последнюю цифру трёхзначного числа
 // 10. Показать вторую цифру трёхзначного числа
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
