@@ -50,6 +50,13 @@
 // Console.Write($"Максимальное число {res}");
 
 //  5. Написать программу вычисления значения функции y=f(a)
+double outSin (double degrees){
+    double angle = Math.PI * degrees / 180.0;
+    return Math.Sin(angle);
+}
+double Sin = outSin(270);
+Console.Write($"Синус заданного угла = {Sin}");
+
 //  6. Выяснить является ли число чётным
 //  7. Показать числа от -N до N
 //  8. Показать четные числа от 1 до N
