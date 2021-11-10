@@ -81,21 +81,26 @@
 // Console.Write($"А чисел то не мало:\n {valueArr} ");
 
 //  8. Показать четные числа от 1 до N
-string numbers (int a){
-    string res = string.Empty;
-    if (a < 0) {res = $"Число {a} должно быть положительным";}
-    else{
-    int [] arr = new int [a]; int b = 1;    
-        for (int i = 0; i < arr.Length; i++) {arr [i] = b; b = b+1;}
-        for (int i = 0; i < arr.Length; i++) {if (arr[i] % 2 == 0) {res = $"{Convert.ToString(res)} {Convert.ToString(arr[i])}";}}
-    }
-    return res;
-}
-int randomNumb = new Random().Next(1, 100);
-string valueArr = numbers(randomNumb);
-Console.Write($"А чисел то не мало от {randomNumb}:\n {valueArr} ");
+// string numbers (int a){
+//     string res = string.Empty;
+//     if (a < 0) {res = $"Число {a} должно быть положительным";}
+//     else{
+//     int [] arr = new int [a]; int b = 1;    
+//         for (int i = 0; i < arr.Length; i++) {arr [i] = b; b = b+1;}
+//         for (int i = 0; i < arr.Length; i++) {if (arr[i] % 2 == 0) {res = $"{Convert.ToString(res)} {Convert.ToString(arr[i])}";}}
+//     }
+//     return res;
+// }
+// int randomNumb = new Random().Next(1, 100);
+// string valueArr = numbers(randomNumb);
+// Console.Write($"А чисел то не мало от {randomNumb}:\n {valueArr} ");
 
 //  9. Показать последнюю цифру трёхзначного числа
+int numbers (int a) {return a % 10;}
+int randomNumb = new Random().Next(100, 1000);
+int valueArr = numbers(randomNumb);
+Console.Write($"Последняя цифра от {randomNumb}:\n {valueArr} ");
+
 // 10. Показать вторую цифру трёхзначного числа
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 // 12. Удалить вторую цифру трёхзначного числа
