@@ -154,12 +154,18 @@
 // Console.Write($"Cлучайное число {randomNumb}: {res}");
 
 // 16. Дано число обозначающее день недели. Выяснить является номер недели выходным днём
-bool valBool (int a) {return a > 5;}
-int randomNumb = new Random().Next(1, 8);
-bool res = valBool(randomNumb);
-Console.Write($"Cлучайное число {randomNumb}: {res}");
+// bool valBool (int a) {return a > 5;}
+// int randomNumb = new Random().Next(1, 8);
+// bool res = valBool(randomNumb);
+// Console.Write($"Cлучайное число {randomNumb}: {res}");
 
 // 17. По двум введённым числам проверять является ли одно квадратом другого
+bool valBool (int a, int b) {return a % b == 0 | b % a == 0;}
+int randomNumbA = new Random().Next(1, 8),
+    randomNumbB = new Random().Next(1, 8);
+bool res = valBool(randomNumbA, randomNumbB);
+Console.Write($"Cлучайные числа {randomNumbA} и {randomNumbB}: {res}");
+
 // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 // 20. Ввести номер четверти, показать диапазоны для возможных координат
