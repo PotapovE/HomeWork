@@ -50,14 +50,23 @@
 // Console.Write($"Максимальное число {res}");
 
 //  5. Написать программу вычисления значения функции y=f(a)
-double outSin (double degrees){
-    double angle = Math.PI * degrees / 180.0;
-    return Math.Sin(angle);
-}
-double Sin = outSin(270);
-Console.Write($"Синус заданного угла = {Sin}");
+// double outSin (double degrees){
+//     double angle = Math.PI * degrees / 180.0;
+//     return Math.Sin(angle);
+// }
+// double Sin = outSin(270);
+// Console.Write($"Синус заданного угла = {Sin}");
 
 //  6. Выяснить является ли число чётным
+string value (int a){
+    string outValue = string.Empty;
+    if (a % 2 == 0) {outValue = "четное";}
+    else {outValue = "нечетное";}
+    return outValue;
+}
+string res = value(14);
+Console.Write($"Число {res}");
+
 //  7. Показать числа от -N до N
 //  8. Показать четные числа от 1 до N
 //  9. Показать последнюю цифру трёхзначного числа
