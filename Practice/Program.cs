@@ -127,13 +127,21 @@
 // Console.Write($"Результат удаления второй цифры из числа {randomNumb}:\n {valueArr} ");
 
 // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
-string numbers (int a , int b) {
-    if (a % b == 0) {return $"Число {a} кратно {b}";}
-    else {return $"Число {a} не кратно {b}, а остаток от деления равен {a % b}";}
-}
-int randomNumb = new Random().Next(100, 1000);
-int randomVal = new Random().Next(10, 15);
-string valueArr = numbers(randomNumb, randomVal);
-Console.Write($"{valueArr}");
+// string numbers (int a , int b) {
+//     if (a % b == 0) {return $"Число {a} кратно {b}";}
+//     else {return $"Число {a} не кратно {b}, а остаток от деления равен {a % b}";}
+// }
+// int randomNumb = new Random().Next(100, 1000);
+// int randomVal = new Random().Next(10, 15);
+// string valueArr = numbers(randomNumb, randomVal);
+// Console.Write($"{valueArr}");
 
 // 14. Найти третью цифру числа или сообщить, что её нет
+int numbers (int a) {
+    if (a < 0) {a = a*-1;}
+    if (a > 99) {return a = a % 1000 / 100;}
+    else {return a = -1;}
+}
+int randomNumb = new Random().Next(-100, 100);
+int valueArr = numbers(randomNumb);
+Console.Write($"Третья цифра числа {randomNumb}:\n {valueArr}");
