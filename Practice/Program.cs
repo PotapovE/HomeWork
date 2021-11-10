@@ -16,6 +16,15 @@
 // Console.Write(res);
 
 //  2. Даны два числа. Показать большее и меньшее число
+string value (int a, int b){
+    string outValue = string.Empty;
+    if (a > b) {outValue = $"{a} больше {b}";}
+    else {outValue = $"{b} больше {a}";}
+    return outValue;
+}
+string res = value (25, 6);
+Console.Write(res);
+
 //  3. По введенному номеру дня недели вывести его название
 //  4. Найти максимальное из трех чисел
 //  5. Написать программу вычисления значения функции y=f(a)
