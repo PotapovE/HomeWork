@@ -148,12 +148,17 @@
 
 // Почувствуй себя джуном
 // 15. Дано число. Проверить кратно ли оно 7 и 23
-bool valBool (int a) {return a % 7 == 0 & a % 23 == 0;}
-int randomNumb = new Random().Next(161, 165);
-bool res = valBool(randomNumb); // 161 сработает как true
-Console.Write($"Cлучайное число {randomNumb}: {res}");
+// bool valBool (int a) {return a % 7 == 0 & a % 23 == 0;}
+// int randomNumb = new Random().Next(161, 165);
+// bool res = valBool(randomNumb); // 161 сработает как true
+// Console.Write($"Cлучайное число {randomNumb}: {res}");
 
 // 16. Дано число обозначающее день недели. Выяснить является номер недели выходным днём
+bool valBool (int a) {return a > 5;}
+int randomNumb = new Random().Next(1, 8);
+bool res = valBool(randomNumb);
+Console.Write($"Cлучайное число {randomNumb}: {res}");
+
 // 17. По двум введённым числам проверять является ли одно квадратом другого
 // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
