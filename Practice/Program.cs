@@ -102,12 +102,21 @@
 // Console.Write($"Последняя цифра от {randomNumb}:\n {valueArr} ");
 
 // 10. Показать вторую цифру трёхзначного числа
-int numbers (int a) {return a = a % 100 / 10;}
-int randomNumb = new Random().Next(100, 1000);
-int valueArr = numbers(randomNumb);
-Console.Write($"Последняя цифра от {randomNumb}:\n {valueArr} ");
+// int numbers (int a) {return a = a % 100 / 10;}
+// int randomNumb = new Random().Next(100, 1000);
+// int valueArr = numbers(randomNumb);
+// Console.Write($"Последняя цифра от {randomNumb}:\n {valueArr} ");
 
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+int numbers (int i) {
+    int a = i / 10, b = i % 10;
+    if (a > b) return a;
+    else return b;  
+}
+int randomNumb = new Random().Next(10, 100);
+int valueArr = numbers(randomNumb);
+Console.Write($"Наибольшая цифра числа {randomNumb}:\n {valueArr} ");
+
 // 12. Удалить вторую цифру трёхзначного числа
 // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 // 14. Найти третью цифру числа или сообщить, что её нет
