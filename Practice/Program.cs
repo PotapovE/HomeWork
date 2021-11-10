@@ -96,12 +96,17 @@
 // Console.Write($"А чисел то не мало от {randomNumb}:\n {valueArr} ");
 
 //  9. Показать последнюю цифру трёхзначного числа
-int numbers (int a) {return a % 10;}
+// int numbers (int a) {return a % 10;}
+// int randomNumb = new Random().Next(100, 1000);
+// int valueArr = numbers(randomNumb);
+// Console.Write($"Последняя цифра от {randomNumb}:\n {valueArr} ");
+
+// 10. Показать вторую цифру трёхзначного числа
+int numbers (int a) {return a = a % 100 / 10;}
 int randomNumb = new Random().Next(100, 1000);
 int valueArr = numbers(randomNumb);
 Console.Write($"Последняя цифра от {randomNumb}:\n {valueArr} ");
 
-// 10. Показать вторую цифру трёхзначного числа
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 // 12. Удалить вторую цифру трёхзначного числа
 // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
