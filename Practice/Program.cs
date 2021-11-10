@@ -26,17 +26,29 @@
 // Console.Write(res);
 
 //  3. По введенному номеру дня недели вывести его название
-string weekDay (int a){
-    string outDay = string.Empty;
-    string [] arrDay = new string [] {"-1", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"};
-    if (a > 0 & a < 8) {outDay = $"Сегодня {arrDay[a]}";}
-    else {outDay = $"Упс, что-то пошло не так";} 
-    return outDay;  
-}
-string res = weekDay(0);
-Console.Write(res);
+// string weekDay (int a){
+//     string outDay = string.Empty;
+//     string [] arrDay = new string [] {"-1", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"};
+//     if (a > 0 & a < 8) {outDay = $"Сегодня {arrDay[a]}";}
+//     else {outDay = $"Упс, что-то пошло не так";} 
+//     return outDay;  
+// }
+// string res = weekDay(0);
+// Console.Write(res);
  
 //  4. Найти максимальное из трех чисел
+// int value (int a, int b, int c){
+//     int outMax = 0;
+//     int [] arrValue = new int []{a, b, c};
+//     for (int i = 0; i < arrValue.Length; i++)
+//     {
+//         if (arrValue[i] > outMax) {outMax = arrValue[i];}
+//     }
+//     return outMax;
+// }
+// int res = value(113, 17, 1);
+// Console.Write($"Максимальное число {res}");
+
 //  5. Написать программу вычисления значения функции y=f(a)
 //  6. Выяснить является ли число чётным
 //  7. Показать числа от -N до N
