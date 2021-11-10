@@ -58,16 +58,28 @@
 // Console.Write($"Синус заданного угла = {Sin}");
 
 //  6. Выяснить является ли число чётным
-string value (int a){
-    string outValue = string.Empty;
-    if (a % 2 == 0) {outValue = "четное";}
-    else {outValue = "нечетное";}
-    return outValue;
-}
-string res = value(14);
-Console.Write($"Число {res}");
+// string value (int a){
+//     string outValue = string.Empty;
+//     if (a % 2 == 0) {outValue = "четное";}
+//     else {outValue = "нечетное";}
+//     return outValue;
+// }
+// string res = value(14);
+// Console.Write($"Число {res}");
 
 //  7. Показать числа от -N до N
+string numbers (int a){
+    if (a > 0) {a = a * -1;}
+    int sum = a * -2 + 1; 
+    int [] arr = new int [sum];
+    string res = string.Empty;
+        for (int i = 0; i < arr.Length; i++) {arr [i] = a; a = a+1;}
+        for (int i = 0; i < arr.Length; i++) {res = $"{Convert.ToString(res)} {Convert.ToString(arr[i])}";}
+    return res;
+}
+string valueArr = numbers(-17);
+Console.Write($"А чисел то не мало:\n {valueArr} ");
+
 //  8. Показать четные числа от 1 до N
 //  9. Показать последнюю цифру трёхзначного числа
 // 10. Показать вторую цифру трёхзначного числа
