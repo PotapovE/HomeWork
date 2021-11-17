@@ -171,18 +171,29 @@
 // Console.Write(valBool(true, true));
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
-int value (int x, int y){
-    int res = 0;
-    if (x == 0 | y == 0) res = -1; // X и Y не могут быть равны 0
-    else if (x > 0 & y > 0) res = 1;
-    else if (x > 0 & y < 0) res = 2;
-    else if (x < 0 & y < 0) res = 3;
-    else if (x < 0 & y > 0) res = 4;
-    return res;
-}
-Console.Write(value(0, 4));
+// int value (int x, int y){
+//     int res = 0;
+//     if (x == 0 | y == 0) res = -1; // X и Y не могут быть равны 0
+//     else if (x > 0 & y > 0) res = 1;
+//     else if (x > 0 & y < 0) res = 2;
+//     else if (x < 0 & y < 0) res = 3;
+//     else if (x < 0 & y > 0) res = 4;
+//     return res;
+// }
+// Console.Write(value(0, 0));
 
 // 20. Ввести номер четверти, показать диапазоны для возможных координат
+string value (int x, int y){
+    string res = string.Empty;
+    if (x == 0 | y == 0) res = $"-1"; // X и Y не могут быть равны 0
+    else if (x > 0 & y > 0) res = $"1; x(0, +▲), y(0, +▲)";
+    else if (x > 0 & y < 0) res = $"2; x(0, +▲), y(0, -▲)";
+    else if (x < 0 & y < 0) res = $"3; x(0, -▲), y(0, -▲)";
+    else if (x < 0 & y > 0) res = $"4; x(0, -▲), y(0, +▲)";
+    return res;
+}
+Console.Write(value(1, 1));
+
 // 21. Программа проверяет пятизначное число на палиндромом.
 // 22. Найти расстояние между точками в пространстве 2D/3D
 
