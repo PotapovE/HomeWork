@@ -176,10 +176,7 @@ Console.Write(value(2, 4, 0, 2, 2, 0));
 string value (int n){
     string res = string.Empty;
     int sq = 1;
-    for (int i = 0; i < n; i++)
-    {
-        res = $"{res} {sq*sq}"; sq++;
-    }
+    for (int i = 0; i < n; i++) {res = $"{res} {sq*sq}"; sq++;}
     return res;
 }
 Console.Write(value(10));
@@ -188,10 +185,7 @@ Console.Write(value(10));
 string value (int n){
     string res = string.Empty;
     int cb = 1;
-    for (int i = 0; i < n; i++)
-    {
-        res = $"{res} {Math.Pow(cb, 3)}"; cb++;
-    }
+    for (int i = 0; i < n; i++) {res = $"{res} {Math.Pow(cb, 3)}"; cb++;}
     return res;
 }
 Console.Write(value(10));
@@ -199,10 +193,7 @@ Console.Write(value(10));
 /*//    25. Найти сумму чисел от 1 до А
 int value (int a){
     int sum = 0, b = 1;
-    for (int i = 0; i < a; i++)
-    {
-        sum += b; b++;
-    }
+    for (int i = 0; i < a; i++) {sum += b; b++;}
     return sum;
 }
 Console.Write(value(10));
@@ -210,10 +201,7 @@ Console.Write(value(10));
 /*//    26. Возведите число А в натуральную степень B используя цикл
 int value (int a, int b){
     int res = a;
-    for (int i = 1; i < b; i++)
-    {
-        res = res * a;
-    }
+    for (int i = 1; i < b; i++) {res = res * a;}
     return res;
 }
 Console.Write(value(-4, 2));
@@ -226,16 +214,97 @@ int value (string n){
 }
 Console.Write(value("12345789"));
 */
-// 28. Подсчитать сумму цифр в числе
-// 29. Написать программу вычисления произведения чисел от 1 до N
-// 30. Показать кубы чисел, заканчивающихся на четную цифру
+/*//    28. Подсчитать сумму цифр в числе
+int value (int n){
+    int sum = 0;
+    while (n != 0) {sum += n % 10; n = n / 10;}
+    return sum;
+}
+Console.Write(value(22345343));
+*/
+/*//    29. Написать программу вычисления произведения чисел от 1 до N
+int func29 (int N){
+int result = 1;
+    for (int i=1; i<=N; i++) {result = result * i;}
+    return result;
+}
+Console.WriteLine(func29(4));
+*/
+/*//    30. Показать кубы чисел, заканчивающихся на четную цифру
+string value (int n){
+    string res = string.Empty;
+    int cb = 1;
+    for (int i = 0; i < n; i++) {
+        if (cb % 2 == 0){
+        res = $"{res} {Math.Pow(cb, 3)}"; cb++;}
+        else cb++;
+    }
+    return res;
+}
+Console.Write(value(10));
+*/
 
 // Почувствуй себя сеньором
-// 31. Задать массив из 8 элементов и вывести их на экран 
-// 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
-// 33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
-// 34. Написать программу замену элементов массива на противоположные
-// 35. Определить, присутствует ли в заданном массиве, некоторое число 
+/*//    31. Задать массив из 8 элементов и вывести их на экран 
+string value (int a){
+    string res = string.Empty;
+    int [] arr = new int [a];
+    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(0, 2);}
+    for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
+    return res;
+}
+Console.Write(value(8));
+*/
+/*//    32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
+string value (int a){
+    string res = string.Empty;
+    int [] arr = new int [a];
+    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(0, 2);}
+    for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
+    return res;
+}
+Console.Write(value(8));
+*/
+/*//    33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
+int value (int a){
+    string res = string.Empty;
+    int [] arr = new int [a];
+    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(0, 10);}
+    for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
+    Console.Write($"{res}\n"); // Вывожу на экран для себя
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++) {if (arr[i] > 0) {sum = sum + arr[i];}}
+    return sum;
+}
+Console.Write(value(12));
+*/
+/*//    34. Написать программу замену элементов массива на противоположные
+string value (int a){
+    string resT = string.Empty;
+    string res = string.Empty;
+    int [] arr = new int [a];
+    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(-3, 4);}
+    for (int i = 0; i < arr.Length; i++) {resT = $"{resT} {arr[i]}";}
+    Console.Write($"{resT}\n"); // Вывожу массив для себя
+    for (int i = 0; i < arr.Length; i++) {arr [i] = - arr [i];}
+    for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
+    return res;
+}
+Console.Write(value(8));
+*/
+/*//    35. Определить, присутствует ли в заданном массиве, некоторое число 
+bool value (int a){
+    string res = string.Empty;
+    int [] arr = new int [8];
+    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(0, 10);}
+    for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
+    Console.Write($"{res}\n"); // Вывожу на экран для себя
+    for (int i = 0; i < arr.Length; i++) {if (arr[i] == a) {return true;}}
+    return !true;
+}
+Console.Write(value(6));
+*/
+
 // 36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
 // 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
 // 38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
