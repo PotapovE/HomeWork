@@ -1,13 +1,13 @@
 ﻿// Почувствуй себя интерном
-/*//    0. Вывести квадрат числа
+/*//    00. Вывести квадрат числа
 int sq (int a) => a*a;
 Console.Write(sq(12));
 */
-/*//    1. По двум введённым числам проверять является ли первое квадратом второго
+/*//    01. По двум введённым числам проверять является ли первое квадратом второго
 bool value (int a, int b) => a == b*b;
 Console.Write(value(24, 5));
 */
-/*//    2. Даны два числа. Показать большее и меньшее число
+/*//    02. Даны два числа. Показать большее и меньшее число
 string value (int a, int b){
     string outValue = string.Empty;
     if (a > b) {outValue = $"{a} > {b}";}
@@ -16,7 +16,7 @@ string value (int a, int b){
 }
 Console.Write(value(24, 5));
 */
-/*//    3. По введенному номеру дня недели вывести его название
+/*//    03. По введенному номеру дня недели вывести его название
 string weekDay (int a){
     string outDay = string.Empty;
     string [] arrDay = new string [] {"-1", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"};
@@ -26,7 +26,7 @@ string weekDay (int a){
 }
 Console.Write(weekDay(0));
 */ 
-/*//    4. Найти максимальное из трех чисел
+/*//    04. Найти максимальное из трех чисел
 int value (int a, int b, int c){
     int outMax = a;
     if (b > outMax) outMax = b;
@@ -35,7 +35,7 @@ int value (int a, int b, int c){
 }
 Console.Write($"Максимальное число {value(-12, -17, -14)}");
 */
-/*//    5. Написать программу вычисления значения функции y=f(a)
+/*//    05. Написать программу вычисления значения функции y=f(a)
 double outSin (double degrees){
     double angle = Math.PI * degrees / 180.0;
     return Math.Sin(angle);
@@ -43,11 +43,11 @@ double outSin (double degrees){
 double Sin = outSin(270);
 Console.Write($"Синус заданного угла = {Sin}");
 */
-/*//    6. Выяснить является ли число чётным
+/*//    06. Выяснить является ли число чётным
 bool value (int a) => a % 2 == 0;
 Console.Write(value(13));
 */
-/*//    7. Показать числа от -N до N
+/*//    07. Показать числа от -N до N
 string numbers (int a){
     if (a > 0) {a = -a;}
     int sum = -2 * a + 1; 
@@ -57,7 +57,7 @@ string numbers (int a){
 }
 Console.Write(numbers(17));
 */
-/*//    8. Показать четные числа от 1 до N
+/*//    08. Показать четные числа от 1 до N
 string numbers (int a){
     int b = 1;
     string res = string.Empty;
@@ -72,7 +72,7 @@ string numbers (int a){
 }
 Console.Write(numbers(2));
 */
-/*//    9. Показать последнюю цифру трёхзначного числа
+/*//    09. Показать последнюю цифру трёхзначного числа
 int numbers (int a) => a % 10;
 Console.Write(numbers(125));
 */
@@ -172,10 +172,52 @@ Console.Write(value(2, 4, 0, 2, 2, 0));
 */
 
 // Почувствуй себя мидлом
-// 23. Показать таблицу квадратов чисел от 1 до N 
-// 24. Найти кубы чисел от 1 до N
-// 25. Найти сумму чисел от 1 до А
-// 26. Возведите число А в натуральную степень B используя цикл
+/*//    23. Показать таблицу квадратов чисел от 1 до N 
+string value (int n){
+    string res = string.Empty;
+    int sq = 1;
+    for (int i = 0; i < n; i++)
+    {
+        res = $"{res} {sq*sq}"; sq++;
+    }
+    return res;
+}
+Console.Write(value(10));
+*/
+/*//    24. Найти кубы чисел от 1 до N
+string value (int n){
+    string res = string.Empty;
+    int cb = 1;
+    for (int i = 0; i < n; i++)
+    {
+        res = $"{res} {Math.Pow(cb, 3)}"; cb++;
+    }
+    return res;
+}
+Console.Write(value(10));
+*/
+/*//    25. Найти сумму чисел от 1 до А
+int value (int a){
+    int sum = 0, b = 1;
+    for (int i = 0; i < a; i++)
+    {
+        sum += b; b++;
+    }
+    return sum;
+}
+Console.Write(value(10));
+*/
+/*//    26. Возведите число А в натуральную степень B используя цикл
+int value (int a, int b){
+    int res = a;
+    for (int i = 1; i < b; i++)
+    {
+        res = res * a;
+    }
+    return res;
+}
+Console.Write(value(-4, 2));
+*/
 // 27. Определить количество цифр в числе
 // 28. Подсчитать сумму цифр в числе
 // 29. Написать программу вычисления произведения чисел от 1 до N
