@@ -191,12 +191,8 @@ string value (int n){
 Console.Write(value(10));
 */
 /*//    25. Найти сумму чисел от 1 до А
-int value (int a){
-    int sum = 0, b = 1;
-    for (int i = 0; i < a; i++) {sum += b; b++;}
-    return sum;
-}
-Console.Write(value(10));
+int value (int a) => a = ((a*(a+1))/2);
+Console.Write(value(4));
 */
 /*//    26. Возведите число А в натуральную степень B используя цикл
 int value (int a, int b){
@@ -382,3 +378,4 @@ int value (int n, int a, int b){
 }
 Console.Write(value(4, -10, 10));
 */
+
