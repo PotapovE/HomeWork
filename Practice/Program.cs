@@ -337,7 +337,18 @@ int value (int a, int b){
 }
 Console.Write(value(10, 99));
 */
-// 38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
-
+/*//    38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
+int value (int n, int a, int b){
+    int [] arr = new int [n];
+    string resStr = string.Empty;
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(a, b);}
+    // for (int i = 0; i < arr.Length; i++) {resStr = $"{resStr} {arr[i]}";}
+    // Console.Write(resStr + "\n");
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++) {if (i % 2 != 0) {sum += arr[i];}}
+    return sum;
+}
+Console.Write(value(4, -10, 10));
+*/
 // 39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 // 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
