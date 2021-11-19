@@ -364,4 +364,21 @@ string value (int n, int a, int b){
 }
 Console.Write(value(9, -10, 10));
 */
-// 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
+/*//    40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
+int value (int n, int a, int b){
+    int [] arr = new int [n];
+    string resStr = string.Empty;
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(a, b);}
+    for (int i = 0; i < arr.Length; i++) {resStr = $"{resStr} {arr[i]}";}
+    Console.Write(resStr + "\n");
+    int maxA = arr[0], minB = arr[0];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > maxA) {maxA = arr[i];}
+        if (arr[i] < minB) {minB = arr[i];}
+    }
+    int res = maxA - minB;
+    return res;
+}
+Console.Write(value(4, -10, 10));
+*/
