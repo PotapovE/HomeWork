@@ -242,140 +242,209 @@ Console.Write(value(10));
 
 // Почувствуй себя сеньором
 /*//    31. Задать массив из 8 элементов и вывести их на экран 
-string value (int a){
+int [] array = new int [8];
+string value (int [] arr){
     string res = string.Empty;
-    int [] arr = new int [a];
-    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(0, 2);}
     for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
     return res;
 }
-Console.Write(value(8));
+Console.Write(value(array));
 */
 /*//    32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
-string value (int a){
+int [] array = new int [8];
+string value (int [] arr){
     string res = string.Empty;
-    int [] arr = new int [a];
-    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(0, 2);}
     for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
     return res;
 }
-Console.Write(value(8));
+void FillArr (int [] arr){
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(0,2);}
+}
+FillArr (array);
+Console.Write(value(array));
 */
 /*//    33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
-int value (int a){
+int [] array = new int [12];
+string value (int [] arr){
     string res = string.Empty;
-    int [] arr = new int [a];
-    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(0, 10);}
     for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
-    Console.Write($"{res}\n"); // Вывожу на экран для себя
+    return res;
+}
+void FillArr (int [] arr){
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(-9,10);}
+}
+int sumPlus (int [] arr){
     int sum = 0;
-    for (int i = 0; i < arr.Length; i++) {if (arr[i] > 0) {sum = sum + arr[i];}}
+    for (int i = 0; i < arr.Length; i++){
+        if (arr [i] > 0) {sum += arr[i]; }
+    }
     return sum;
 }
-Console.Write(value(12));
+int sumMin (int [] arr){
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++){
+        if (arr [i] < 0) {sum += arr[i]; }
+    }
+    return sum;
+}
+
+FillArr (array);
+Console.Write(value(array));
+Console.Write($"\nСумма положительных = {sumPlus(array)}\nСумма отрицательных = {sumMin(array)}");
 */
 /*//    34. Написать программу замену элементов массива на противоположные
-string value (int a){
-    string resT = string.Empty;
+int [] array = new int [5];
+string value (int [] arr){
     string res = string.Empty;
-    int [] arr = new int [a];
-    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(-3, 4);}
-    for (int i = 0; i < arr.Length; i++) {resT = $"{resT} {arr[i]}";}
-    Console.Write($"{resT}\n"); // Вывожу массив для себя
-    for (int i = 0; i < arr.Length; i++) {arr [i] = - arr [i];}
     for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
     return res;
 }
-Console.Write(value(8));
+void FillArr (int [] arr){
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(-9,10);}
+}
+void RevArr (int [] arr){
+    for (int i = 0; i < arr.Length; i++) {arr[i] = -arr[i];}
+}
+
+FillArr (array);
+RevArr (array);
+Console.Write(value(array));
 */
 /*//    35. Определить, присутствует ли в заданном массиве, некоторое число 
-bool value (int a){
+int [] array = new int [3];
+string value (int [] arr){
     string res = string.Empty;
-    int [] arr = new int [8];
-    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(0, 10);}
     for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
-    Console.Write($"{res}\n"); // Вывожу на экран для себя
-    for (int i = 0; i < arr.Length; i++) {if (arr[i] == a) {return true;}}
-    return !true;
-}
-Console.Write(value(6));
-*/
-/*//    36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
-int [] valueArr (int n){
-    int [] arr = new int [n];
-    for (int i = 0; i < arr.Length; i++) {arr [i] = new Random().Next(100, 1000);}
-    return arr;
-}
-string outValue (int a){
-    string res = string.Empty;
-    string resStr = string.Empty;
-    int sumA = 0, sumB = 0;
-    int [] outArr = valueArr(a);
-    for (int i = 0; i < outArr.Length; i++) {
-        if (outArr[i] % 2 == 0) {sumA++;}
-        else {sumB++;}
-    }
-    for (int i = 0; i < outArr.Length; i++) {resStr = $"{resStr} {outArr[i]}";}
-    return $"{resStr}\n{sumA} - (%2 = 0), {sumB} - (%2 != 0)";
-}
-Console.Write(outValue(6));
-*/
-/*//    37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
-int value (int a, int b){
-    int res = 0;
-    int [] arr = new int [123];
-    // string resStr = string.Empty;
-    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(-1000, 1000);}
-    // for (int i = 0; i < arr.Length; i++) {resStr = $"{resStr} {arr[i]}";}
-    // Console.Write(resStr + "\n");
-    for (int i = 0; i < arr.Length; i++) {if (arr[i] >= a & arr[i] <= b) {res++;}}
     return res;
 }
-Console.Write(value(10, 99));
+void FillArr (int [] arr){
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(0,6);}
+    }
+bool findA (int [] arr, int a){
+    for (int i = 0; i < arr.Length; i++){
+        if (a == arr[i]) return true;
+    }
+    return !true;
+}
+
+FillArr (array);
+Console.Write(value(array));
+Console.WriteLine($"\n{findA (array, 5)}");
 */
-/*//    38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
-int value (int n, int a, int b){
-    int [] arr = new int [n];
-    // string resStr = string.Empty;
-    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(a, b);}
-    // for (int i = 0; i < arr.Length; i++) {resStr = $"{resStr} {arr[i]}";}
-    // Console.Write(resStr + "\n");
+/*//    36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
+int [] array = new int [5];
+string value (int [] arr){
+    string res = string.Empty;
+    for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
+    return res;
+}
+void FillArr (int [] arr){
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(100,1000);}
+}
+int sumEven (int [] arr){
     int sum = 0;
-    for (int i = 0; i < arr.Length; i++) {if (i % 2 != 0) {sum += arr[i];}}
+    for (int i = 0; i < arr.Length; i++){
+        if (arr [i] % 2 == 0) {sum ++; }
+    }
     return sum;
 }
-Console.Write(value(4, -10, 10));
+int sumOdd (int [] arr){
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++){
+        if (arr [i] % 2 != 0) {sum ++; }
+    }
+    return sum;
+}
+
+FillArr (array);
+Console.Write(value(array));
+Console.Write($"\nКоличество четных = {sumEven(array)}\nКоличество нечетных = {sumOdd(array)}");
+*/
+/*//    37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
+int [] array = new int [5];
+string value (int [] arr){
+    string res = string.Empty;
+    for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
+    return res;
+}
+void FillArr (int [] arr){
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(1,15);}
+}
+int sumValue (int [] arr){
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++){
+        if (arr [i] >= 10 & arr[i] <= 99) {sum ++; }
+    }
+    return sum;
+}
+
+FillArr (array);
+Console.Write(value(array));
+Console.Write($"\nКоличество чисел из отрезка = {sumValue(array)}");
+*/
+/*//    38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
+int [] array = new int [5];
+string value (int [] arr){
+    string res = string.Empty;
+    for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
+    return res;
+}
+void FillArr (int [] arr){
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(1,10);}
+}
+int sumOdd (int [] arr){
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++){
+        if (i % 2 != 0) {sum += arr[i]; }
+    }
+    return sum;
+}
+
+FillArr (array);
+Console.Write(value(array));
+Console.Write($"\nСумма чисел на нечетных индексах = {sumOdd(array)}");
 */
 /*//    39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
-string value (int n, int a, int b){
-    int [] arr = new int [n];
-    // string resStr = string.Empty;
+int [] array = new int [10];
+string value (int [] arr){
+    string res = string.Empty;
+    for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
+    return res;
+}
+void FillArr (int [] arr){
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(-9,10);}
+}
+string valueRes (int [] arr){
     string valRes = string.Empty;
-    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(a, b);}
-    // for (int i = 0; i < arr.Length; i++) {resStr = $"{resStr} {arr[i]}";}
-    // Console.Write(resStr + "\n");
-    int res = 0, x = 0, y = n-1;
+    int res = 0, x = 0, y = arr.Length -1;
     while (x < y) {res = arr[x] * arr [y]; x++; y--; valRes = $"{valRes} {res}";}
     return valRes;
 }
-Console.Write(value(9, -10, 10));
+
+FillArr (array);
+Console.Write(value(array));
+Console.Write($"\n{valueRes(array)}");
 */
 /*//    40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
-int value (int n, int a, int b){
-    int [] arr = new int [n];
-    string resStr = string.Empty;
-    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().Next(a, b);}
-    for (int i = 0; i < arr.Length; i++) {resStr = $"{resStr} {arr[i]}";}
-    Console.Write(resStr + "\n");
-    int maxA = arr[0], minB = arr[0];
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if (arr[i] > maxA) {maxA = arr[i];}
-        if (arr[i] < minB) {minB = arr[i];}
-    }
-    int res = maxA - minB;
+double [] array = new double [5];
+string value (double [] arr){
+    string res = string.Empty;
+    for (int i = 0; i < arr.Length; i++) {res = $"{res} {arr[i]}";}
     return res;
 }
-Console.Write(value(4, -10, 10));
-*/
+void FillArr (double [] arr){
+    for (int i = 0; i < arr.Length; i++) {arr[i] = new Random().NextDouble()*1000;}
+}
+double sum (double [] arr){
+    double min = arr [0], max = arr [0];
+    for (int i = 0; i < arr.Length; i++){
+        if (arr [i] > max) {max = arr[i];}
+        if (arr [i] < min) {min = arr[i];}
+    }
+    return max - min;
+}
 
+FillArr (array);
+Console.Write(value(array));
+Console.Write($"\nРазница = {sum(array)}");
+*/
