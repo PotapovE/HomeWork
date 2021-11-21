@@ -450,9 +450,24 @@ Console.Write($"\nРазница = {sum(array)}");
 */
 
 // Почувствуй себя лидом
-/*// 41. Выяснить являются ли три числа сторонами треугольника
+/*//    41. Выяснить являются ли три числа сторонами треугольника
 // a < b + c; b < a + c; c < a + b - треугольник существует, если выполняются эти неравентсва.
 
 bool check (int a, int b, int c) => a < b + c & b < a + c & c < a +b;
 Console.Write(check(5, 9, 5));
+*/
+/*//    42. Определить сколько чисел больше 0 введено с клавиатуры
+Console.Write("Enter nambers: ");
+string? value = Console.ReadLine();
+if (value == null) value = "0";
+
+int count (string str){
+    int sum = 0;
+    for (int i = 0; i < str.Length; i++){
+        if (str.Substring(i, 1) != "0"){sum++;}
+    }
+    return sum;
+}
+
+Console.WriteLine($"Count: {count(value)}");
 */
