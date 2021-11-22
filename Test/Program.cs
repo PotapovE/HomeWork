@@ -1,14 +1,28 @@
-﻿// 42. Определить сколько чисел больше 0 введено с клавиатуры
-Console.Write("Enter nambers: ");
-string? value = Console.ReadLine();
-if (value == null) value = "0";
+﻿// 43. Написать программу преобразования десятичного числа в двоичное
 
-int count (string str){
-    int sum = 0;
-    for (int i = 0; i < str.Length; i++){
-        if (str.Substring(i, 1) != "0"){sum++;}
+using System;
+
+    namespace Test{
+
+        class Program{
+
+            static void Main(){
+
+                string value (int n){
+
+                    string res = string.Empty;
+                    while (n > 0)
+                    {
+                        int ost = n % 2;
+                        res = $"{ost}{res}";
+                        n = n/2;
+                    }
+                    return res;
+                }
+                Console.Write(value(102));
+
+            }
+
+        }
+
     }
-    return sum;
-}
-
-Console.WriteLine($"Count: {count(value)}");
