@@ -471,7 +471,7 @@ int count (string str){
 
 Console.WriteLine($"Count: {count(value)}");
 */
-/*// 43. Написать программу преобразования десятичного числа в двоичное
+/*//    43. Написать программу преобразования десятичного числа в двоичное
                 string value (int n){
 
                     string res = string.Empty;
