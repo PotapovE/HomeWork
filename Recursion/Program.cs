@@ -20,3 +20,15 @@ string ShowNaturalNumbers(int n)
 
 Console.WriteLine(ShowNaturalNumbers(6));
 */
+/*//    68. Показать натуральные числа от M до N, N и M заданы
+string ShowNaturalNumbers(int m, int n)
+{
+    string vulueNumbers = string.Empty;
+    if (n == m) return $"{m}";
+    if (m < n) vulueNumbers = $"{m} {ShowNaturalNumbers(m + 1, n)}";
+    else vulueNumbers = $"{m} {ShowNaturalNumbers(m - 1, n)}";
+    return vulueNumbers;
+}
+
+Console.WriteLine(ShowNaturalNumbers(-10, -5));
+*/
