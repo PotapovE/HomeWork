@@ -32,3 +32,14 @@ string ShowNaturalNumbers(int m, int n)
 
 Console.WriteLine(ShowNaturalNumbers(-10, -5));
 */
+/*//    69. Найти сумму элементов от M до N, N и M заданы
+int SumNumbers(int m, int n)
+{
+    if (n == m) return m;
+    if (m < n) m += SumNumbers(m + 1, n);
+    else m += SumNumbers(m - 1, n);
+    return m;
+}
+
+Console.WriteLine(SumNumbers(-1, -5));
+*/
