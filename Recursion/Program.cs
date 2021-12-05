@@ -1,5 +1,4 @@
 ﻿/*//    66. Показать натуральные числа от 1 до N, N задано
-
 string ShowNaturalNumbers(int n)
 {
     if (n <= 1) return "1";
@@ -42,4 +41,14 @@ int SumNumbers(int m, int n)
 }
 
 Console.WriteLine(SumNumbers(-1, -5));
+*/
+/*//    70. Найти сумму цифр числа
+int sum(int n)
+{
+    n = Math.Abs(n);
+    if (n > 9) return n % 10 + sum(n / 10);
+    return n % 10;    
+}
+
+Console.WriteLine(sum(-1095));
 */
